@@ -17,7 +17,7 @@ class CategoryTest extends TestCase
         $this->category = new Category();
     }
 
-    public function testIfUeTraits()
+    public function testIfUseTraits()
     {
         $traits = [
             softDeletes::class,
