@@ -116,6 +116,15 @@ class CategoryControllerTest extends TestCase
             ]);
     }
 
+    public function testDestroy()
+    {
+        $category = factory(Category::class)->create();
+        $response = $this->json('DELETE', route('categories.destroy', ['category' => $category->id]));
+        $response->assertStatus(204);
+        $this->assertNull(Category::find($category->id));
+        $this->assertNotNull(Category::withTrashed()->find($category->id));
+        }
+
     protected function assertInvalidationMax(TestResponse $response)
     {
         $response->assertStatus(422)
@@ -133,4 +142,6 @@ class CategoryControllerTest extends TestCase
                 Lang::get('validation.boolean', ['attribute' => 'is active'])
             ]);
     }
+
+    
 }
