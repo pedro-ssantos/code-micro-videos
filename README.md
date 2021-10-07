@@ -21,3 +21,7 @@ $ docker-compose up
 ```
 http://localhost:8000
 ```
+
+## Pontos de Interesse
+
+[ ] Trait para validação de campos.
