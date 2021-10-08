@@ -25,3 +25,6 @@ http://localhost:8000
 ## Pontos de Interesse
 
 [ ] Trait para validação de campos.
+[ ] Abstract CRUD.
+[ ] Stub para teste de Classe Abstrata.
+[ ]  
